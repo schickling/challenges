@@ -1,7 +1,12 @@
 challenges
 ==========
 
-Coding challenges to discuss about solutions
+Coding challenges - talk about solutions
+
+## Challenges
+
+* [**Coffee Time Challenges**](http://www.datagenetics.com/blog/june22014/index.html) - Small coding puzzles
+* *please add some more...*
 
 ## Rules
 
