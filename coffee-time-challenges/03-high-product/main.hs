@@ -1,27 +1,14 @@
 module Main where
 
-import Data.List
+import Data.List (sortBy)
 
 highProduct :: [Int] -> (Int, Int)
-highProduct = maximumPartition . assmblePartitions . sortPartitions . perms
+highProduct = foldl distribute (0, 0) . sortBy (flip compare)
 
-maximumPartition :: [(Int, Int)] -> (Int, Int)
-maximumPartition = maximumBy (\(a1, b1) (a2, b2) -> compare (a1 * b1) (a2 * b2))
+distribute :: (Int, Int) -> Int -> (Int, Int)
+distribute (a, b) x
+  | a > b     = (a, b * 10 + x)
+  | otherwise = (a * 10 + x, b)
 
-assmblePartitions :: [([Int], [Int])] -> [(Int, Int)]
-assmblePartitions = map (\(a, b) -> (assmble a, assmble b))
-
-sortPartitions :: [([Int], [Int])] -> [([Int], [Int])]
-sortPartitions = map (\(a, b) -> (reverse $ sort a, reverse $ sort b))
-
-assmble :: [Int] -> Int
-assmble xs = sum $ zipWith (\x y -> 10^y * x) (reverse xs) [0..]
-
-perms :: [Int] -> [([Int], [Int])]
-perms xs = concatMap allPartitions (permutations xs)
-
-allPartitions :: [Int] -> [([Int], [Int])]
-allPartitions xs = [ splitAt k xs | k <- [1..length xs - 1]]
-
-main = putStrLn $ show $ highProduct [0..9]
-
+main :: IO()
+main = print $ highProduct [0..9]
