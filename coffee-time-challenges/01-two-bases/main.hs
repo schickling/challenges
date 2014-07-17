@@ -1,13 +1,13 @@
-module TwoBase where
+module Main where
 
-findBase :: (Int, Int, Int)
-findBase = head [(x, y, z) | x <- [1..9], y <- [1..9], z <- [1..9], assemble x y z == (asBase9 $ assemble z y x)]
+-- XYZ in base10 (ten) is equal to ZYX in base9
+check :: (Eq a, Num a) => (a, a, a) -> Bool
+check (x, y, z) = x*10^2 + y*10 + z == z*9^2 + y*9 + x
 
-asBase9 :: Int -> Int
-asBase9 x = accBase9 x 0
-  where
-    accBase9 0 _ = 0
-    accBase9 x i = 10^i * (x `mod` 9) + accBase9 (x `div` 9) (i + 1)
+-- Find all numbers with property 'check'
+solve :: [(Int, Int, Int)]
+solve = filter check [(x, y, z) | x <- [0..9], y <- [0..9], z <- [0..9]]
 
-assemble :: Int -> Int -> Int -> Int
-assemble x y z = x*100 + y*10 + z
+-- Print results
+main :: IO()
+main = print solve
