@@ -22,12 +22,12 @@ func main() {
 		a, b := 0, 0
 		beforeMark := true
 
-		for i := 0; i < 10; i++ {
+		// optimization: permutation not possible since denominator has to be 4 digits long
+		if permutatedDigits[4] != 'x' {
+			continue
+		}
 
-			// optimization: permutation not possible since denominator has to be 4 digits long
-			if permutatedDigits[4] != 'x' {
-				break
-			}
+		for i := 0; i < 10; i++ {
 
 			if i == 4 {
 				beforeMark = false
