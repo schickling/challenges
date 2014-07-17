@@ -14,14 +14,12 @@ int main() {
     float b = 0;
     bool foundX = false;
 
+	if(numbers[5] != 'x') 
+	  continue;
+
     for(int i = 0; i < 10; i++) {
 
-      // optimization: permutation not possible since denominator has to be 4 digits long
-      if(numbers[i] != 'x') {
-        break;
-      }
-
-      if(i == 4) {
+      if(numbers[i] == 'x') {
         foundX = true;
       } else {
         if(!foundX) {
