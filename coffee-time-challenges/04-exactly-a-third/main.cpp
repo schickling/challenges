@@ -15,8 +15,13 @@ int main() {
 		bool foundX = false;
 
 		for(int i = 0; i < 10; i++) {
-			
-			if(numbers[i] == 'x') {
+
+			// optimization: permutation not possible since denominator has to be 4 digits long
+      if(numbers[i] != 'x') {
+        break;
+      }
+
+			if(i == 4) {
 				foundX = true;
 			} else {
 			    if(!foundX) {
