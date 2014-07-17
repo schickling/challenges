@@ -1,0 +1,1 @@
+In a room there are a mixture of people and dogs. There are 72 heads, and 200 legs. How many dogs are in the room? (No tricks, no chromosomal abnormalities, no disabilities …)
