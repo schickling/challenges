@@ -1,0 +1,1 @@
+Find three digits X, Y and Z such that XYZ in base10 is equal to ZYX in base9?
