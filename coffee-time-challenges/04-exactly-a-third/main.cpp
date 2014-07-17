@@ -10,30 +10,24 @@ int main() {
 
   do {
 
-    float a = 0;
-    float b = 0;
-    bool foundX = false;
+    int a = 0;
+    int b = 0;
 
 	if(numbers[5] != 'x') 
 	  continue;
 
-    for(int i = 0; i < 10; i++) {
-
-      if(numbers[i] == 'x') {
-        foundX = true;
-      } else {
-        if(!foundX) {
-          a *= 10;
-          a += numbers[i];
-        } else {
-          b *= 10;
-          b += numbers[i];
-        }
-      }
+    for(int i = 0; i < 5; i++) {
+  	  a *= 10;
+   	  a += numbers[i];
+    }
+    
+	for(int i = 6; i < 10; i++) {
+  	  b *= 10;
+   	  b += numbers[i];
     }
 
     if(a != 0 && b != 0) {
-      if(a / b == 3) {
+      if(a / b == 3 && a % b == 0) {
         cout << b << " / " << a << endl;
       }
     }
