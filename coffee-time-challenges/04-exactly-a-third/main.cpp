@@ -4,43 +4,43 @@
 using namespace std;
 
 int main() {
-	int numbers[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 'x' };
+  int numbers[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 'x' };
 
-	sort(numbers, numbers + 10);
+  sort(numbers, numbers + 10);
 
-	do {
+  do {
 
-		float a = 0;
-		float b = 0;
-		bool foundX = false;
+    float a = 0;
+    float b = 0;
+    bool foundX = false;
 
-		for(int i = 0; i < 10; i++) {
+    for(int i = 0; i < 10; i++) {
 
-			// optimization: permutation not possible since denominator has to be 4 digits long
+      // optimization: permutation not possible since denominator has to be 4 digits long
       if(numbers[i] != 'x') {
         break;
       }
 
-			if(i == 4) {
-				foundX = true;
-			} else {
-			    if(!foundX) {
-				    a *= 10;
-				    a += numbers[i];
-				} else {
-					b *= 10;
-					b += numbers[i];
-				}
-			}
-		}
+      if(i == 4) {
+        foundX = true;
+      } else {
+        if(!foundX) {
+          a *= 10;
+          a += numbers[i];
+        } else {
+          b *= 10;
+          b += numbers[i];
+        }
+      }
+    }
 
-		if(a != 0 && b != 0) {
-			if(a / b == 3) {
-				cout << b << " / " << a << endl;
-			}
-		}
+    if(a != 0 && b != 0) {
+      if(a / b == 3) {
+        cout << b << " / " << a << endl;
+      }
+    }
 
-	} while(next_permutation(numbers, numbers + 10));
+  } while(next_permutation(numbers, numbers + 10));
 
-	return 0;
+  return 0;
 }
