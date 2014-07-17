@@ -5,7 +5,8 @@ Coding challenges - talk about solutions
 
 ## Challenges
 
-* [**Coffee Time Challenges**](http://www.datagenetics.com/blog/june22014/index.html) - Small coding puzzles
+* [**Coffee Time Challenges**](http://www.datagenetics.com/blog/june22015/index.html) - Small coding puzzles
+* [**Project Euler**](https://projecteuler.net/) - Small to medium math and coding puzzles. 
 * *please add some more...*
 
 ## Rules
