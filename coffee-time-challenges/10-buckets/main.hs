@@ -3,11 +3,11 @@ module Main where
 import Data.List (sortBy,nub,permutations)
 import Data.List.Split (splitOneOf)
 
--- -1 and 0 are bucket delimiters
-buckets :: [[[Int]]]
-buckets = filter (all isValidBucket) $ map makeBuckets $ permutations [-1..13]
+buckets :: [Int] -> [[[Int]]]
+buckets xs = filter (all isValidBucket) $ map makeBuckets $ permutations (delimiters ++ xs)
   where
-    makeBuckets = splitOneOf [0,-1]
+    delimiters = [-2,-1]
+    makeBuckets = splitOneOf delimiters
 
 isValidBucket :: [Int] -> Bool
 isValidBucket xs = not $ any (`elem` differences xs) xs
@@ -19,4 +19,4 @@ differences xs = nub $ concatMap (\(z:zs) -> map (\a -> z - a) zs) subLists
     subLists = map (`drop` sortedList) [0..length xs - 2]
 
 main :: IO()
-main = print buckets
+main = print $ buckets [1..13]
