@@ -1,0 +1,1 @@
+Find six distinct integers: A, B, C, D, E, F the reciprocals of which add up to exactly one. e.g. 1/A + 1/B + … 1/F = 1
