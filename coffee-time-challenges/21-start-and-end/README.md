@@ -1,0 +1,1 @@
+Find the smallest possible natural number that ends in 6 such that if the 6 is erased and placed in front of the remaining digits, the resulting number is 4 times as large as the original number.
