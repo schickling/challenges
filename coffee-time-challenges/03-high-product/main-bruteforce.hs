@@ -23,5 +23,6 @@ perms xs = concatMap allPartitions (permutations xs)
 allPartitions :: [Int] -> [([Int], [Int])]
 allPartitions xs = [ splitAt k xs | k <- [1..length xs - 1]]
 
+main :: IO()
 main = putStrLn $ show $ highProduct [0..9]
 
