@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 from itertools import combinations
 import locale
@@ -30,4 +31,4 @@ def main():
 if __name__ == '__main__':
     maxima = main()
     for a, b, m in maxima:
-        print("%i x %i = %s" % (a, b, locale.format("%d", m, grouping=True)))
+        print("%i • %i = %s" % (a, b, locale.format("%d", m, grouping=True)))
