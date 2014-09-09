@@ -1,4 +1,5 @@
-Some time ago, the famous artist DorFuchs posted a riddle on his facebook page:
+## Dorfuchs numbers
+Some time ago, the famous artist DorFuchs posted a riddle on his Facebook page:
 
 Find all distinct numbers consisting of exactly five digits, where the five digits have to be five successive digits between 0 and 9.
 Numbers with leading zeros should not be included.
