@@ -45,8 +45,10 @@ $ wc -c base.py
 | ----------- | -------- | ---------- | ---------------- | ------------------------------------------------------------------------------- |
 | Scala.scala | Scala  | 188 | ?                |                                                                                 |
 | base.py     | Python | 478 | 570 | Un-golfed version with comments                                                 |
-| golfed-1.py | Python | 174 | 505 | Golved version of base.py. Only comments and docstrings and spaces were removed |
-| golfed-2.py | Python   | 148 | 485 | Based on golfed-1.py. Function inlining; Variable renaming     |
+| golfed-1.py | Python | 174 | 505 | Golfed version of base.py. Only comments and docstrings and spaces were removed |
+| golfed-2.py | Python | 148 | 485 | Based on golfed-1.py. Function inlining; Variable renaming     |
+| base.hs     | Haskell | 808 | 1364245 | un-golved version with comments |
+| golfed-1.hs | Haskell | 340 | 1364116 | Golfed version of base.hs. Only comments and whitespaces were removed |
 
 Note that you can compile Python with `python -m compileall .`.
 
