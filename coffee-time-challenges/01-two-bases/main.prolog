@@ -2,11 +2,6 @@
 % Find three digits X, Y and Z such that
 % XYZ in base10 is equal to ZYX in base9
 
-range(Low, Low, _).
-range(Out,Low,High) :- NewLow is Low+1,
-                       NewLow =< High,
-                       range(Out, NewLow, High).
-
 is_solution(X, Y, Z) :- between(0,9,X),
                         between(0,9,Y),
                         between(0,9,Z),
