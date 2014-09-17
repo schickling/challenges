@@ -1,6 +1,5 @@
 object ExactlyAthrid {
     def main(arg: Array[String]) {
-        var max = List(BigInt(0), BigInt(0), BigInt(0));
         val digits = List(1, 2, 3, 4, 5, 6, 7, 8, 9);
         for (c <- digits.combinations(4)) {
             for(d <- c.permutations) {
